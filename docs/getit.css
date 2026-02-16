@@ -1,5 +1,3 @@
-
-/* Algumas informações úteis e dicas: */
 :root {
   /* fontes */
   --font1: 'Roboto', sans-serif;
@@ -16,6 +14,9 @@
   /* -tons de cinza */
   --grey1: #2c2c2c;
   --grey2: #4c4c4c;
+
+  /* - preto */
+  --faded_black: rgba(0,0,0,0.5);
   
   /* -cores dos cards */
   --collor1: #ead3a7;
@@ -24,7 +25,8 @@
   --collor4: #fae890;
   --collor5: #abe9c1;
 
-  /* - Sombra: https://codepen.io/sdthornton/pen/wBZdXq */
+  /* sombras */
+  --shadow_ab: 0 2px 8px var(--faded_black);
 }
 
 html,
@@ -36,14 +38,19 @@ body {
   display: flex;
   flex-direction: row;
   background-color: var(--yellow3);
+  box-shadow: var(--shadow_ab);  
 }
-
 .logo {
   display: flex;
   width: 8%;
   padding: .5%;
 }
-  
+.subtitle {
+  display: flex;
+  align-items: center;
+  font-size: 90%;
+  margin-left: 2%;
+} 
 
 
 /* Você pode usar o CSS comentado abaixo, se ajudar */
