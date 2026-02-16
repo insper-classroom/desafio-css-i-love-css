@@ -2,7 +2,6 @@
   /* fonts */
   --font1: 'Roboto', sans-serif;
   --font2: 'Permanent Marker', cursive;
-  
   /* colors */
   /* -shades of yellow */
   --yellow1: #e4fc2b;
@@ -15,17 +14,30 @@
   --grey2: #4c4c4c;
   /* - black */
   --faded_black: rgba(0,0,0,0.5);
-  /* -card colors */
-  --collor1: #ead3a7;
-  --collor2: #9de0f5;
-  --collor3: #ef89ba;
-  --collor4: #fae890;
-  --collor5: #abe9c1;
-
   /* shadows */
   --shadow_ab: 0 2px 8px var(--faded_black);
   --shadow_fc: 0 5px 10px var(--faded_black);
 }
+
+/* CARD SUBCLASS PARAMS */
+/* colors */
+.card-color-1 { background-color:#ead3a7; }
+.card-color-2 { background-color:#9de0f5; }
+.card-color-3 { background-color:#ef89ba; }
+.card-color-4 { background-color:#fae890; }
+.card-color-5 { background-color:#abe9c1; }
+/* angles */
+.card-rotation-1 { transform: rotate(-5deg); }
+.card-rotation-2 { transform: rotate(-4deg); }
+.card-rotation-3 { transform: rotate(-3deg); }
+.card-rotation-4 { transform: rotate(-2deg); }
+.card-rotation-5 { transform: rotate(-1deg); }
+.card-rotation-6 { transform: rotate(0deg); }
+.card-rotation-7 { transform: rotate(1deg); }
+.card-rotation-8 { transform: rotate(2deg); }
+.card-rotation-9 { transform: rotate(3deg); }
+.card-rotation-10 { transform: rotate(4deg); }
+.card-rotation-11 { transform: rotate(5deg); }
 
 /* DOCUMENT */
 html, body {
@@ -49,7 +61,7 @@ html, body {
 .logo {
   display: flex;
   width: 80px;
-  padding: .5%;
+  padding: 5px;
 }
 .subtitle {
   display: flex;
@@ -59,7 +71,7 @@ html, body {
 } 
 /* form card */
 .form-card {
-  margin: 5%;
+  margin: 50px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -94,56 +106,37 @@ html, body {
   font-weight: 500;
   cursor: pointer;
 }
-
-
-/* Você pode usar o CSS comentado abaixo, se ajudar */
-/* Fonte: https://codepen.io/CrisWoler/pen/ogXBLj */
-/* .btn {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-
-  overflow: hidden;
-
-  border-width: 0;
-  outline: none;
-  border-radius: 2px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-
-  background-color: #f7d736;
-
-  transition: background-color 0.3s;
+/* cards */
+/* card container */
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-
-.btn > * {
-  position: relative;
+/* card */
+.card {
+  font-family: var(--font2);
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  width: 220px;
+  padding: 10px;
+  margin: 8px;
+  margin-bottom: 15px;
 }
-
-.btn:before {
-  content: "";
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  display: block;
-  width: 0;
-  padding-top: 0;
-
-  border-radius: 100%;
-
-  background-color: rgba(236, 240, 241, 0.3);
-
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
-
-.btn:active:before {
-  width: 120%;
-  padding-top: 120%;
-
-  transition: width 0.2s ease-out, padding-top 0.2s ease-out;
-} */
+.card-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.card-content {
+  color: var(--grey2);
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
