@@ -1,39 +1,45 @@
 :root {
-  /* fontes */
+  /* fonts */
   --font1: 'Roboto', sans-serif;
   --font2: 'Permanent Marker', cursive;
   
-  /* cores */
-  /* -tons de amarelo */
+  /* colors */
+  /* -shades of yellow */
   --yellow1: #e4fc2b;
   --yellow2: #e0d426;
   --yellow3: #f7d736;
   --yellow4: #e0af26;
   --yellow5: #fcb02b;
-  
-  /* -tons de cinza */
+  /* -shades of grey */
   --grey1: #2c2c2c;
   --grey2: #4c4c4c;
-
-  /* - preto */
+  /* - black */
   --faded_black: rgba(0,0,0,0.5);
-  
-  /* -cores dos cards */
+  /* -card colors */
   --collor1: #ead3a7;
   --collor2: #9de0f5;
   --collor3: #ef89ba;
   --collor4: #fae890;
   --collor5: #abe9c1;
 
-  /* sombras */
+  /* shadows */
   --shadow_ab: 0 2px 8px var(--faded_black);
+  --shadow_fc: 0 5px 10px var(--faded_black);
 }
 
-html,
-body {
+/* DOCUMENT */
+html, body {
   font-family: var(--font1);
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+/* COMPONENTS */
+/* appbar */
 .appbar {
   display: flex;
   flex-direction: row;
@@ -42,7 +48,7 @@ body {
 }
 .logo {
   display: flex;
-  width: 8%;
+  width: 80px;
   padding: .5%;
 }
 .subtitle {
@@ -51,6 +57,43 @@ body {
   font-size: 90%;
   margin-left: 2%;
 } 
+/* form card */
+.form-card {
+  margin: 5%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: var(--shadow_fc);
+}
+.form-card-title, input{
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 0;
+  font-weight: 500;
+  color: var(--grey2);
+}
+.autoresize {
+  border: none;
+  outline: none;
+  resize: none;
+  margin-top: 10px;
+  padding: 0;
+  margin-bottom: 5px;
+  font-family: var(--font1);
+  font-weight: 400;
+}
+.btn {
+  padding: 5px;
+  border: none;
+  background-color: var(--yellow3);
+  border-radius: 3px;
+  font-family: var(--font1);
+  font-weight: 500;
+  cursor: pointer;
+}
 
 
 /* Você pode usar o CSS comentado abaixo, se ajudar */
